@@ -1,0 +1,33 @@
+{
+  "name": "api-nodejs-tienda-hibrida",
+  "version": "1.0.0",
+  "description": "my primera api en nodejs",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon ./src/index.js",
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/l4mbb/api_app_hibrida.git"
+  },
+  "keywords": [
+    "node",
+    "js"
+  ],
+  "author": "l4mbb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/l4mbb/api_app_hibrida/issues"
+  },
+  "homepage": "https://github.com/l4mbb/api_app_hibrida#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "firebase-admin": "^13.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
