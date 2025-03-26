@@ -27,7 +27,7 @@ router.get('/probarConect', async (req, res) => {
 // read del CRUD, haciendo prueba con firebase
 router.get('/traerUsuarios', async (req, res) => {
     try {
-        const querySnapshot = await db.collection('productos').get();
+        const querySnapshot = await db.collection('usuarios').get();
         if (querySnapshot.empty) {
             console.log('No se encuentran documentos');
             res.status(404).send('No se encuentran documentos');
@@ -35,10 +35,10 @@ router.get('/traerUsuarios', async (req, res) => {
         }
 
 
-        const productos = querySnapshot.docs.map(doc => doc.data());
-        console.log('Users:', productos);
+        const usuarios = querySnapshot.docs.map(doc => doc.data());
+        console.log('Users:', usuarios);
 
-        res.json(productos);
+        res.json(usuarios);
     } catch (error) {
         console.error('Error getting documents: ', error);
         res.status(500).send('Error getting products');
