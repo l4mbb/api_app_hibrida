@@ -11,18 +11,16 @@ const router = Router();
 // Ruta para validar la conexión a Firebase
 router.get('/probarConect', async (req, res) => {
     try {
-        // Intenta obtener documentos de una colección (por ejemplo, 'usuarios')
         const querySnapshot = await db.collection('usuarios').limit(1).get();
 
-        // Si la consulta se ejecuta correctamente, la conexión es exitosa
         if (!querySnapshot.empty) {
-            return res.send('Conexión a Firebase exitosa. Documentos encontrados.');
+            return res.json({ success: true, message: 'Conexión a Firebase exitosa.' });
         } else {
-            return res.send('Conexión a Firebase exitosa. No se encontraron documentos.');
+            return res.json({ success: true, message: 'Conexión a Firebase exitosa, pero sin documentos.' });
         }
     } catch (error) {
         console.error('Error al conectar con Firebase:', error);
-        res.status(500).send('Error al conectar con Firebase');
+        res.status(500).json({ success: false, message: 'Error al conectar con Firebase' });
     }
 });
 
