@@ -17,10 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', router);
 
 // Permitir solicitudes desde cualquier origen
-app.use(cors({
-    origin: '*',  // Puedes cambiarlo por 'http://localhost:4200/' si solo necesitas Angular
-    credentials: true
-}));
+app.use(cors());
 
 
 

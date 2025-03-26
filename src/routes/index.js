@@ -149,6 +149,8 @@ router.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
 
+        console.log(req.body);
+
         // Validación de datos
         if (!email || !password) {
             return res.status(400).send('Todos los campos son obligatorios');
@@ -171,6 +173,7 @@ router.post('/login', async (req, res) => {
 
         res.send('Inicio de sesión exitoso');
     } catch (error) {
+        console.log(req.body);
         console.error('Error al iniciar sesión:', error);
         res.status(500).send('Error al iniciar sesión');
     }
