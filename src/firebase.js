@@ -1,8 +1,9 @@
 import 'dotenv/config';
 import admin from 'firebase-admin';
 
-// Lee las credenciales desde la variable de entorno
-const serviceAccount = JSON.parse(process.env.GOOGLE_APPLICATION_CREDENTIALS);
+// Lee las credenciales desde el archivo especificado en la variable de entorno
+const serviceAccountPath = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+const serviceAccount = JSON.parse(readFileSync(serviceAccountPath, 'utf8'));
 
 // Inicializa Firebase Admin
 admin.initializeApp({
@@ -13,5 +14,6 @@ admin.initializeApp({
 const db = admin.firestore();
 
 console.log('Firebase admin initialized');
+console.log(`Service account loaded from: ${serviceAccountPath}`);
 
 export { db };
