@@ -1,13 +1,1 @@
-{
-  "type": "service_account",
-  "project_id": "api-firebase-tienda-hibrida",
-  "private_key_id": "efab697ecde02f8dfd2f0b5c47a5520d250baff6",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCL7giHmf+1QpHa\nZ3PiKpXGCsD6x+GfonuUnh6puUXIx713CmZ430psoOJPNXmo6/O/GEbAHGMlVyq6\nI1HAIjqFrcuG78LeXtRfIHKDGYDQgKaPD9EJMHuHLmXHBA4TozLmcd5Na/LxOBsa\nzeEIGht9pLTCjNLp9UBeO3wTGuP6IZCl6HGi34Ie8MbF0IayF4udpqvWsdSCRP26\nMvEf9jvL9jTEbspD99W+eoFpfTCtTmylbFBrFUZuoKzzXg9PmoX1ro6KM7qR0yMB\noAZEoZ81f1eqvgzGQ6dcsBVq4iSLwghGtlp3RnLaSXAScNQ51Xkk9nzU66UW5N0I\nX/lb2EwNAgMBAAECggEAHoiuzk41rPstggPMlvfVbl1m3mJS8sddIaE+TilaV7V0\nO79mfG43GoyhzYh893YjXlnhCGc5YErMzUjLPDqL3CNAM/3qHyWAwJA/RKnCQN0t\n2y5nnhJ5BhbDCUIygyj7wKrsyCar4OSuD3OI7QBraseP1RsvI/PLG7TtvmqCAFDT\nlcK0On7Pv+aJeaSMJ9lc1mEyKjVLDFuvVVLaPR0kCZLLnErzVb/R2S26sJwg13s7\nx53p8TuJmXH08X8bow/EOBEjCaDiB8HZP4nEbPSonoHdfyiFEDTbKkb0wuQoenpU\nYJgz7ujazxCZKnO+hBGz/Ak1WE1SSUDnCxcLw2A8+QKBgQDBUdOAtFvNTisrX6qW\n0t3G7eTO/ESudedf0lSj9pcpeKO4TiTUPABZ1XqkZz1qZ4ix3EVE6mOjbU+qVgJa\nobFQqCUHUIv8NHRvUTEtZS+qP/tj/xVynxa3QHyEIzOMuwW9EzyN71F9JUMOXRBU\nX7rr33AON/jHu10DFY+TL0vzxQKBgQC5TKyr604TFEfvJXiMy558X/02lHy+sXkN\nKCTEqVFNiea/zf11SpZtOgzQC/fdzTmBU2G95OMVLvs2QqbySaFiPN6NaOgivjMQ\nMgmAGfnX3d9tO3+j7W/Rp0cg2Haq7CQi8VaokfMThd/76aQYQuSnq+hILdni8iJc\nIoKV3TXTqQKBgGfbFc0nF8qMHBUJKBQu5IZid3HbhOpU3SBVVrNfXoYhEZOKJ679\nLRMV5PU9oXjwdjdXJr+HTFAYAZx46HrYMvIp4vqzAwFTDNpgvBKvMZQ9G0j1WQhi\n/0kjk8FJSABq2QJiuz1lPFoHEqc8x/EMHNdrCkAZQcXLmoR1qNRhrGQhAoGAKzj2\nYhe+G3c0nFT6PKVWb56YWv3h5z1QhkAh63mvTE3pdD4hbBWc5xeOW40fIS64xjDj\n8L6ONafC01JSzNtd+KNIKmYZF9mT4ag6TRZCEBdiAYHKcTt2RMonLkMv0wjIGRqA\nY0vADoLAz2sdasdXvMC9qvB/DY/7cdBe84QpBRkCgYAkqnyotjFTvXsYjTnxcpIW\nTQ/+Q5B8oZ5DnjqUNs4o/BA7tSSsQfB+HjdDH4+iUePqfYn+AulHL5phwHK0/QUs\nkQHJ9gRTs6InpCjxMkuLzvek/V6SUl7o6GA4YQtPVnz9yLTu4w/vdqLAodd8thoy\nxr9hyi9u3cfvYBsA/fNbaA==\n-----END PRIVATE KEY-----\n",
-  "client_email": "firebase-adminsdk-fbsvc@api-firebase-tienda-hibrida.iam.gserviceaccount.com",
-  "client_id": "110236910360403308100",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40api-firebase-tienda-hibrida.iam.gserviceaccount.com",
-  "universe_domain": "googleapis.com"
-}
+
