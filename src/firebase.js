@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import admin from 'firebase-admin';
+import { readFileSync } from 'fs';
 
 // Lee las credenciales desde el archivo especificado en la variable de entorno
 const serviceAccountPath = process.env.GOOGLE_APPLICATION_CREDENTIALS;
