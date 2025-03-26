@@ -148,18 +148,17 @@ router.post('/register', async (req, res) => {
 router.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
-
         console.log(req.body);
 
         // Validación de datos
         if (!email || !password) {
-            return res.status(400).send('Todos los campos son obligatorios');
+            return res.status(400).json({ error: 'Todos los campos son obligatorios' });
         }
 
         // Buscar el usuario por email
         const querySnapshot = await db.collection('usuarios').where('email', '==', email).get();
         if (querySnapshot.empty) {
-            return res.status(404).send('Usuario no encontrado');
+            return res.status(404).json({ error: 'Usuario no encontrado' });
         }
 
         // Obtener los datos del usuario
@@ -168,14 +167,22 @@ router.post('/login', async (req, res) => {
 
         // Comparar la contraseña directamente
         if (password !== userData.password) {
-            return res.status(401).send('Contraseña incorrecta');
+            return res.status(401).json({ error: 'Contraseña incorrecta' });
         }
 
-        res.send('Inicio de sesión exitoso');
+        // Respuesta exitosa con información del usuario
+        res.json({
+            message: 'Inicio de sesión exitoso',
+            user: {
+                id: userDoc.id,
+                email: userData.email,
+                nombre: userData.nombre  // Suponiendo que el usuario tiene un nombre
+            }
+        });
     } catch (error) {
         console.log(req.body);
         console.error('Error al iniciar sesión:', error);
-        res.status(500).send('Error al iniciar sesión');
+        res.status(500).json({ error: 'Error al iniciar sesión' });
     }
 });
 
