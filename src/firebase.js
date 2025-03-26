@@ -1,26 +1,20 @@
+import 'dotenv/config';
 import admin from 'firebase-admin';
 import { readFileSync } from 'fs';
-import path from 'path';
 import { fileURLToPath } from 'url';
 
-// Obtener el equivalente de __dirname
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// Ruta al archivo firebase.json
-const serviceAccountPath = path.join(__dirname,'..', 'firebase.json');
-
-// Lee y parsea el archivo firebase.json
-const serviceAccount = JSON.parse(readFileSync(serviceAccountPath, 'utf8'));
+// Lee el archivo de credenciales de Firebase
+const serviceAccount = JSON.parse(readFileSync(process.env.GOOGLE_APPLICATION_CREDENTIALS, 'utf8'));
 
 // Inicializa la aplicación de Firebase Admin
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: serviceAccount.databaseURL, // Asegúrate de que firebase.json tenga este campo
+  databaseURL: process.env.FIREBASE_DATABASE_URL,
 });
 
 const db = admin.firestore();
 
 console.log('Firebase admin initialized');
+console.log(process.env.GOOGLE_APPLICATION_CREDENTIALS);
 
 export { db };
