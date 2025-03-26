@@ -148,7 +148,7 @@ router.post('/register', async (req, res) => {
 router.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
-        console.log(req.body);
+        console.log('Datos sin entrar a ningun error', req.body);
 
         // Validación de datos
         if (!email || !password) {
@@ -180,7 +180,8 @@ router.post('/login', async (req, res) => {
             }
         });
     } catch (error) {
-        console.log(req.body);
+        console.log('Datos que entraron al error', req.body);
+        console.log('Error al iniciar sesión:', error);
         console.error('Error al iniciar sesión:', error);
         res.status(500).json({ error: 'Error al iniciar sesión' });
     }
