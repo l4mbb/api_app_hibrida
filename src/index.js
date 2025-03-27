@@ -17,7 +17,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', router);
 
 // Permitir solicitudes desde cualquier origen
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:8100/',  // Solo permite Ionic
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+}));
 
 
 
