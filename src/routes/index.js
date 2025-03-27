@@ -119,27 +119,27 @@ router.post('/register', async (req, res) => {
 
         // Validación de datos
         if (!userName || !email || !password) {
-            return res.status(400).send('Todos los campos son obligatorios');
+            return res.status(400).json({ error: 'Todos los campos son obligatorios' });
         }
 
         // Verificar si el usuario ya existe
         const querySnapshot = await db.collection('usuarios').where('email', '==', email).get();
         if (!querySnapshot.empty) {
-            return res.status(400).send('El usuario ya está registrado');
+            return res.status(400).json({ error: 'El usuario ya está registrado' });
         }
 
-        // Guardar el usuario en Firebase sin encriptar la contraseña
+        // Guardar el usuario en Firebase (Recuerda encriptar la contraseña en producción)
         await db.collection('usuarios').add({
             userName,
             email,
-            password, // Contraseña sin encriptar
+            password // ⚠ NO es seguro almacenar la contraseña sin encriptar
         });
 
-        res.send('Usuario registrado correctamente');
+        res.json({ message: 'Usuario registrado correctamente' });
     } catch (error) {
         console.error('Error al registrar el usuario:', error);
-        res.status(500).send('Error al registrar el usuario');
-    }
+        res.status(500).json({ error: 'Error al registrar el usuario' });
+    }
 });
 
 
